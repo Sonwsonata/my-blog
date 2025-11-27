@@ -49,7 +49,7 @@
       if (document.images) {
         var avatar = new Image();
         avatar.src = '/my-blog/imgs/duye.jpg'
-        var previews = 'preview1.jpg,preview2.jpg,preview3.jpg,preview4.jpg'.split(',')
+        var previews = 'preview1.jpg,preview2.jpg,bg4.png,preview4.jpg'.split(',')
         var previewsPreLoad = []
         for(var i = 0; i < length; i++) {
           previewsPreLoad.push(new Image())
@@ -208,7 +208,7 @@
       	var [month, day] = article.date.split('-')
         ''
         ''
-        var defaultPreview = '/my-blog/imgs/preview/preview3.jpg'
+        var defaultPreview = '/my-blog/imgs/preview/preview4.jpg'
         var preview = article.preview ? article.preview : defaultPreview
         var path = '/my-blog/' + article.path
         resultList.append(`<div class="article well clearfix article-body article-excerpt" data-aos="flip-up">

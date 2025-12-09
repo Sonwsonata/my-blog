@@ -12,7 +12,7 @@
     
     
     
-    <title>categories: 编程 | my blogs</title>
+    <title>异步编程 | my blogs</title>
     <link href="https://sonwsonata.github.io/my-blog" rel="prefetch" />
 
     
@@ -196,19 +196,36 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 gal-right" id="mainstay">
-                    <article class="article well article-body" id="article-category">
+                    
+<article class="article well article-body" id="article">
     <div class="breadcrumb">
         <i class="fa fa-home"></i>
         <a href="https://sonwsonata.github.io/my-blog">my blogs</a>
         >
-        <span>目录</span>
+        <span>异步编程</span>
     </div>
     <!-- 大型设备详细文章 -->
     <div class="hidden-xs">
         <div class="title-article">
             <h1>
-                <a href="/my-blog/categories/%E7%BC%96%E7%A8%8B/index.html">编程</a>
+                <a href="/my-blog/2025/12/09/%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/">异步编程</a>
             </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-tags"></i>
+                
+                <a href="/my-blog/tags/%E5%BC%82%E6%AD%A5/">异步</a>, 
+                
+                <a href="/my-blog/tags/promise/">promise</a>
+                
+            </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2025-12-09
+            </span>
+            
         </div>
     </div>
     <!-- 小型设备详细文章 -->
@@ -216,21 +233,77 @@
         <center>
             <div class="title-article">
                 <h4>
-                    <a href="/my-blog/categories/%E7%BC%96%E7%A8%8B/index.html">编程</a>
+                    <a href="/my-blog/2025/12/09/%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/">异步编程</a>
                 </h4>
             </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2025-12-09
+            </p>
+            <p>
+                
+                <i class="fa fa-tags"></i>
+                
+                <a href="/my-blog/tags/%E5%BC%82%E6%AD%A5/">异步</a>, 
+                
+                <a href="/my-blog/tags/promise/">promise</a>
+                
+                
+                
+            </p>
         </center>
     </div>
-    <div class="content-article" style="margin-top: 30px;">
-        <div class="alert alert-info" style="font-size: 14px; line-height: 2; font-weight: bold;">
-            
-            <a href="/my-blog/2025/11/29/OOP-FG/">OOP-FG</a>
-            <br>
-            
-            
-        </div>
+    <div class="content-article">
+        <h1 id="Day-16-2025-12-8"><a href="#Day-16-2025-12-8" class="headerlink" title="Day 16 2025.12.8"></a>Day 16 2025.12.8</h1><ul>
+<li><h2 id="异步编程"><a href="#异步编程" class="headerlink" title="异步编程"></a>异步编程</h2><ul>
+<li><p>为主流开出一个支流出来，可以在保证主流前进运行的情况下，支流能够独自干事。</p>
+</li>
+<li><h3 id="回调函数"><a href="#回调函数" class="headerlink" title="回调函数"></a>回调函数</h3><ul>
+<li>setTimeout （函数，时间）  有两个输入量，作用是在设定的时间后进行输入的函数操作</li>
+</ul>
+</li>
+<li><h3 id="异步-AJAX（一个很神秘的东西，留在这里，）"><a href="#异步-AJAX（一个很神秘的东西，留在这里，）" class="headerlink" title="异步 AJAX（一个很神秘的东西，留在这里，）"></a>异步 AJAX（一个很神秘的东西，留在这里，）</h3></li>
+</ul>
+</li>
+<li><h2 id="JavaScript-Promise"><a href="#JavaScript-Promise" class="headerlink" title="JavaScript Promise"></a>JavaScript Promise</h2><ul>
+<li><p>Promise是一个类，使用时的格式如下</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> p = <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> ok = <span class="title class_">Math</span>.<span class="title function_">random</span>();</span><br><span class="line">    <span class="keyword">if</span> (ok &gt; <span class="number">0.5</span>) &#123;</span><br><span class="line">        <span class="title function_">resolve</span>(<span class="string">&quot;这是成功的数据&quot;</span>);   <span class="comment">// ← 这里传出去的就是 user</span></span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="title function_">reject</span>(<span class="string">&quot;失败原因&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">p.<span class="title function_">then</span>(<span class="function">(<span class="params">user</span>) =&gt;</span> &#123;        <span class="comment">// ← user 接收 resolve(...) 的内容</span></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;成功:&quot;</span>, user);</span><br><span class="line">&#125;).<span class="title function_">catch</span>(<span class="function">(<span class="params">err</span>) =&gt;</span> &#123;       <span class="comment">// err 接收 reject(...) 的内容</span></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;失败:&quot;</span>, err);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>​    <strong>感觉好神秘</strong>：这个判断条件不是很理解，什么才算成功，这个还是写的if语句，网上查说是，实际开发中可能是：硬盘、网络、数据库响应    </p>
+<p>​    解释一下上面的代码：</p>
+<p>1、用随机数模拟了判断条件（<strong>这个先跳过吧，真不知道什么判断</strong>）</p>
+<p>2、简单来说就是，判断条件判断成功的时候会把resolve中的数据传出去（失败就是reject），之后你在后面使用then的时候里面的user就会接收到resolve传来的数据（失败就是catch中的err）</p>
+<h2 id="promise的方法"><a href="#promise的方法" class="headerlink" title="promise的方法"></a>promise的方法</h2><ul>
+<li><p><strong>then</strong>( )，<strong>成功时</strong></p>
+</li>
+<li><p><strong>catch</strong>( )，<strong>失败时</strong></p>
+</li>
+<li><p><strong>finally</strong>( )，<strong>无论最终状态</strong></p>
+</li>
+<li><p><strong>Promise .all( )   等待所有 Promise 完成，或任意一个 Promise 失败。</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Promise</span>.<span class="title function_">all</span>([p1, p2, p3])<span class="comment">//这个Promise不是实例</span></span><br><span class="line">  .<span class="title function_">then</span>(<span class="function"><span class="params">results</span> =&gt;</span> &#123; <span class="comment">/* 全部成功 */</span> &#125;)</span><br><span class="line">  .<span class="title function_">catch</span>(<span class="function"><span class="params">error</span> =&gt;</span> &#123; <span class="comment">/* 任意一个失败 */</span> &#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>必须传入一个数组</strong>，里面是多个 Promise。</li>
+<li><strong>全部成功 → 进入 then</strong>，<code>results</code> 是所有结果组成的数组，按顺序排列。</li>
+<li><strong>只要有一个失败 → 进入 catch</strong>，<code>error</code> 是最先失败的那个 Promise 的错误。</li>
+</ul>
+</li>
+<li><p><strong>Promise.race( )   返回最先完成（无论成功或失败）的 Promise 的结果</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Promise</span>.<span class="title function_">race</span>([promise1, promise2, promise3])</span><br><span class="line">  .<span class="title function_">then</span>(<span class="function">(<span class="params">result</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 使用最先完成的 Promise 的结果</span></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(result);</span><br><span class="line">  &#125;)</span><br><span class="line">  .<span class="title function_">catch</span>(<span class="function">(<span class="params">error</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 如果最先完成的 Promise 是失败的</span></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">error</span>(error);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><h3 id="Promise-resolve-和-Promise-reject-快速创建已解决或已拒绝的-Promise。"><a href="#Promise-resolve-和-Promise-reject-快速创建已解决或已拒绝的-Promise。" class="headerlink" title="Promise.resolve() 和 Promise.reject()  快速创建已解决或已拒绝的 Promise。"></a>Promise.resolve() 和 Promise.reject()  快速创建已解决或已拒绝的 Promise。</h3></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
     </div>
 </article>
+
+
                 </div>
                 <aside class="col-md-4 gal-left" id="sidebar">
     <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
@@ -361,17 +434,17 @@
 
                 
                 <li>
-                    <a href="/my-blog/categories/%E7%BC%96%E7%A8%8B/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                    <a href="/my-blog/2025/12/09/%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
                 </li>
                 
                 
                 <li>
-                    <a href="/my-blog/categories/%E7%BC%96%E7%A8%8B/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                    <a href="/my-blog/2025/12/09/%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
                 </li>
                 
                 
                 <li>
-                    <a href="/my-blog/categories/%E7%BC%96%E7%A8%8B/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                    <a href="/my-blog/2025/12/09/%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
                 </li>
                 
             </ul>
@@ -379,13 +452,13 @@
                 
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/my-blog/tags/OOP/" style="font-size: 11.461213976433992px;" class="tag-cloud-link">OOP</a>
+    <a href="/my-blog/tags/OOP/" style="font-size: 15.450134250201202px;" class="tag-cloud-link">OOP</a>
     
-    <a href="/my-blog/tags/FG/" style="font-size: 10.094259075280245px;" class="tag-cloud-link">FG</a>
+    <a href="/my-blog/tags/FG/" style="font-size: 8.598635083786954px;" class="tag-cloud-link">FG</a>
     
-    <a href="/my-blog/tags/%E5%BC%82%E6%AD%A5/" style="font-size: 9.808036706858534px;" class="tag-cloud-link">异步</a>
+    <a href="/my-blog/tags/%E5%BC%82%E6%AD%A5/" style="font-size: 19.181082945371184px;" class="tag-cloud-link">异步</a>
     
-    <a href="/my-blog/tags/promise/" style="font-size: 13.762298260762556px;" class="tag-cloud-link">promise</a>
+    <a href="/my-blog/tags/promise/" style="font-size: 14.267815217115839px;" class="tag-cloud-link">promise</a>
     
 </div>
                 

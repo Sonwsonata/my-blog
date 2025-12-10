@@ -273,7 +273,7 @@
 <p>1、用随机数模拟了判断条件（<strong>这个先跳过吧，真不知道什么判断</strong>）</p>
 <p>2、简单来说就是，判断条件判断成功的时候会把resolve中的数据传出去（失败就是reject），之后你在后面使用then的时候里面的user就会接收到resolve传来的数据（失败就是catch中的err）</p>
 <h2 id="promise的方法"><a href="#promise的方法" class="headerlink" title="promise的方法"></a>promise的方法</h2><ul>
-<li><p><strong>then</strong>( )，<strong>成功时</strong></p>
+<li><p><strong>then</strong>( )，<strong>成功时 或 失败时</strong></p>
 </li>
 <li><p><strong>catch</strong>( )，<strong>失败时</strong></p>
 </li>
@@ -293,7 +293,11 @@
 
 
 </li>
-<li><h3 id="Promise-resolve-和-Promise-reject-快速创建已解决或已拒绝的-Promise。"><a href="#Promise-resolve-和-Promise-reject-快速创建已解决或已拒绝的-Promise。" class="headerlink" title="Promise.resolve() 和 Promise.reject()  快速创建已解决或已拒绝的 Promise。"></a>Promise.resolve() 和 Promise.reject()  快速创建已解决或已拒绝的 Promise。</h3></li>
+<li><h3 id="Promise-resolve-和-Promise-reject-快速创建已解决或已拒绝的-Promise。"><a href="#Promise-resolve-和-Promise-reject-快速创建已解决或已拒绝的-Promise。" class="headerlink" title="Promise.resolve() 和 Promise.reject()  快速创建已解决或已拒绝的 Promise。"></a>Promise.resolve() 和 Promise.reject()  快速创建已解决或已拒绝的 Promise。</h3><ul>
+<li><p>Promise.resolve</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> fifteen = <span class="title class_">Promise</span>.<span class="title function_">resolve</span>(<span class="number">15</span>);</span><br><span class="line">fifteen.<span class="title function_">then</span>(<span class="function"><span class="params">value</span> =&gt;</span> <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`Got <span class="subst">$&#123;value&#125;</span>`</span>));</span><br><span class="line"><span class="comment">// → Got 15</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -413,13 +417,13 @@
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/my-blog/2025/12/09/%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/">异步编程</a>
+                    <a href="/my-blog/2025/11/26/hello-world/">Hello World</a>
                 </span>
             </li>
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/my-blog/2025/11/26/hello-world/">Hello World</a>
+                    <a href="/my-blog/2025/12/09/%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/">异步编程</a>
                 </span>
             </li>
             
@@ -452,13 +456,13 @@
                 
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/my-blog/tags/OOP/" style="font-size: 15.450134250201202px;" class="tag-cloud-link">OOP</a>
+    <a href="/my-blog/tags/OOP/" style="font-size: 8.69870014368607px;" class="tag-cloud-link">OOP</a>
     
-    <a href="/my-blog/tags/FG/" style="font-size: 8.598635083786954px;" class="tag-cloud-link">FG</a>
+    <a href="/my-blog/tags/FG/" style="font-size: 9.222789328815768px;" class="tag-cloud-link">FG</a>
     
-    <a href="/my-blog/tags/%E5%BC%82%E6%AD%A5/" style="font-size: 19.181082945371184px;" class="tag-cloud-link">异步</a>
+    <a href="/my-blog/tags/%E5%BC%82%E6%AD%A5/" style="font-size: 19.482134640262124px;" class="tag-cloud-link">异步</a>
     
-    <a href="/my-blog/tags/promise/" style="font-size: 14.267815217115839px;" class="tag-cloud-link">promise</a>
+    <a href="/my-blog/tags/promise/" style="font-size: 9.771323385687294px;" class="tag-cloud-link">promise</a>
     
 </div>
                 

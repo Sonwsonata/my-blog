@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="Jintian Zhang">
+    
+    <meta name="description" content="这是我的第一个hexo博客">
+    
+    
+    
+    
+    
+    
+    <title>JavaScript复习 | my blogs</title>
+    <link href="https://sonwsonata.github.io/my-blog" rel="prefetch" />
+
+    
+<link rel="stylesheet" href="/my-blog/css/bootstrap.min.css">
+<link rel="stylesheet" href="/my-blog/css/aos.css">
+<link rel="stylesheet" href="/my-blog/css/style.css">
+
+    
+<script src="/my-blog/js/jquery.min.js"></script>
+
+    
+<script src="/my-blog/js/bootstrap.min.js"></script>
+
+    
+<script src="/my-blog/js/aos.js"></script>
+
+    
+<script src="/my-blog/js/highslide/highslide-full.min.js"></script>
+
+    
+<link rel="stylesheet" href="/my-blog/js/highslide/highslide.css">
+
+    <style type="text/css">
+        @media (max-width: 768px) {
+            body {
+                background-color: #f0f0f0;
+                background: url('/imgs/xsbg.gif');
+                background-attachment: fixed;
+            }
+        }
+    </style>
+    
+    <!--<script type="text/javascript">
+      if (document.images) {
+        var avatar = new Image();
+        avatar.src = '/my-blog/imgs/duye.jpg'
+        var previews = 'preview1.jpg,preview2.jpg,yeqi.jpg,bg1.png,bg2.png,bg3.png,bg4.png,bg5.png,bg6.jpg,preview4.jpg'.split(',')
+        var previewsPreLoad = []
+        for(var i = 0; i < length; i++) {
+          previewsPreLoad.push(new Image())
+          previewsPreLoad[previewsPreLoad.length - 1].src = '/my-blog/imgs/preview' + previews[i]
+        }
+      }
+    </script>-->
+<meta name="generator" content="Hexo 8.1.1"></head>
+<body>
+    <!-- 背景轮播图功能 -->
+    <section class="hidden-xs">
+    <ul class="cb-slideshow">
+        <li><span>天若</span></li>
+        <li><span>有情</span></li>
+        <li><span>天亦老</span></li>
+        <li><span>我为</span></li>
+        <li><span>长者</span></li>
+        <li><span>续一秒</span></li>
+    </ul>
+</section>
+    <!-- 欧尼酱功能, 谁用谁知道 -->
+    
+    <header class="navbar navbar-inverse" id="gal-header">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target=".bs-navbar-collapse"
+                    aria-expanded="false">
+                <span class="fa fa-lg fa-reorder"></span>
+            </button>
+            <a href="https://sonwsonata.github.io/my-blog">
+                
+                <style>
+                    #gal-header .navbar-brand {
+                        height: 54px;
+                        line-height: 24px;
+                        font-size: 28px;
+                        opacity: 1;
+                        background-color: rgba(0,0,0,0);
+                        text-shadow: 0 0 5px #fff,0 0 10px #fff,0 0 15px #fff,0 0 20px #228DFF,0 0 35px #228DFF,0 0 40px #228DFF,0 0 50px #228DFF,0 0 75px #228DFF;
+                    }
+                </style>
+                <!-- 这里使用文字(navbar_text or config.title) -->
+                <div class="navbar-brand">my blogs</div>
+                
+            </a>
+        </div>
+        <div class="collapse navbar-collapse bs-navbar-collapse">
+            <ul class="nav navbar-nav" id="menu-gal">
+                
+                
+                <li class="">
+                    <a href="/my-blog/">
+                        <i class="fa fa-home"></i>首页
+                    </a>
+                </li>
+                
+                
+                
+                <li class="">
+                    <a href="/my-blog/archives">
+                        <i class="fa fa-archive"></i>归档
+                    </a>
+                </li>
+                
+                
+                
+                
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                        <i class="fa fa-list"></i>分类
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/my-blog/categories/%E7%BC%96%E7%A8%8B/">编程</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/my-blog/categories/JS/">JS</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/my-blog/categories/%E7%BC%96%E7%A8%8B/%E5%AD%A6%E4%B9%A0/">学习</a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="/my-blog/categories">...</a>
+                        </li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                
+                
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                        <i class="fa fa-tags"></i>标签
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/my-blog/tags/OOP/">OOP</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/my-blog/tags/FG/">FG</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/my-blog/tags/%E5%A4%8D%E4%B9%A0/">复习</a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="/my-blog/tags">...</a>
+                        </li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                
+                <li class="">
+                    <a href="/my-blog/about">
+                        <i class="fa fa-user"></i>关于我
+                    </a>
+                </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</header>
+    <div id="gal-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 gal-right" id="mainstay">
+                    
+<article class="article well article-body" id="article">
+    <div class="breadcrumb">
+        <i class="fa fa-home"></i>
+        <a href="https://sonwsonata.github.io/my-blog">my blogs</a>
+        >
+        <span>JavaScript复习</span>
+    </div>
+    <!-- 大型设备详细文章 -->
+    <div class="hidden-xs">
+        <div class="title-article">
+            <h1>
+                <a href="/my-blog/2025/12/21/JavaScript%E5%A4%8D%E4%B9%A0/">JavaScript复习</a>
+            </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-tags"></i>
+                
+                <a href="/my-blog/tags/%E5%A4%8D%E4%B9%A0/">复习</a>, 
+                
+                <a href="/my-blog/tags/JS/">JS</a>
+                
+            </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2025-12-21
+            </span>
+            
+        </div>
+    </div>
+    <!-- 小型设备详细文章 -->
+    <div class="visible-xs">
+        <center>
+            <div class="title-article">
+                <h4>
+                    <a href="/my-blog/2025/12/21/JavaScript%E5%A4%8D%E4%B9%A0/">JavaScript复习</a>
+                </h4>
+            </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2025-12-21
+            </p>
+            <p>
+                
+                <i class="fa fa-tags"></i>
+                
+                <a href="/my-blog/tags/%E5%A4%8D%E4%B9%A0/">复习</a>, 
+                
+                <a href="/my-blog/tags/JS/">JS</a>
+                
+                
+                
+            </p>
+        </center>
+    </div>
+    <div class="content-article">
+        <h1 id="JavaScript合订集"><a href="#JavaScript合订集" class="headerlink" title="JavaScript合订集"></a>JavaScript合订集</h1><h2 id="数据类型："><a href="#数据类型：" class="headerlink" title="数据类型："></a>数据类型：</h2><ul>
+<li>number </li>
+<li>string </li>
+<li>boolean </li>
+<li>undefined </li>
+<li>null </li>
+<li>object</li>
+</ul>
+<hr>
+<h2 id="严格模式："><a href="#严格模式：" class="headerlink" title="严格模式："></a>严格模式：</h2><p>JS 会 <strong>用更严格的语法和行为检查你的代码</strong></p>
+<p><strong>一些“以前能跑但有问题的写法”会直接报错</strong></p>
+<h3 id="1️⃣-禁止隐式全局变量"><a href="#1️⃣-禁止隐式全局变量" class="headerlink" title="1️⃣ 禁止隐式全局变量"></a>1️⃣ 禁止隐式全局变量</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&#x27;use strict&#x27;</span></span><br><span class="line">x = <span class="number">100</span>   <span class="comment">// ❌ 报错</span></span><br></pre></td></tr></table></figure>
+
+<p>必须写：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> x = <span class="number">100</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="2️⃣-普通函数里的-this-不再指向-window（你刚学到的点）"><a href="#2️⃣-普通函数里的-this-不再指向-window（你刚学到的点）" class="headerlink" title="2️⃣ 普通函数里的 this 不再指向 window（你刚学到的点）"></a>2️⃣ 普通函数里的 this 不再指向 window（你刚学到的点）</h3><h4 id="非严格模式"><a href="#非严格模式" class="headerlink" title="非严格模式"></a>非严格模式</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">foo</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">foo</span>()   <span class="comment">// window</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="严格模式"><a href="#严格模式" class="headerlink" title="严格模式"></a>严格模式</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&#x27;use strict&#x27;</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">foo</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">foo</span>()   <span class="comment">// undefined</span></span><br></pre></td></tr></table></figure>
+
+<p>👉 <strong>这是你前面 this 行为差异的根源之一</strong></p>
+<hr>
+<h3 id="3️⃣-禁止重复参数名"><a href="#3️⃣-禁止重复参数名" class="headerlink" title="3️⃣ 禁止重复参数名"></a>3️⃣ 禁止重复参数名</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&#x27;use strict&#x27;</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">foo</span>(<span class="params">a, a</span>) &#123;&#125; <span class="comment">// ❌</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="4️⃣-只读属性不能改"><a href="#4️⃣-只读属性不能改" class="headerlink" title="4️⃣ 只读属性不能改"></a>4️⃣ 只读属性不能改</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&#x27;use strict&#x27;</span></span><br><span class="line"><span class="title class_">NaN</span> = <span class="number">1</span>    <span class="comment">// ❌</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="5️⃣-更严格的语法检查"><a href="#5️⃣-更严格的语法检查" class="headerlink" title="5️⃣ 更严格的语法检查"></a>5️⃣ 更严格的语法检查</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&#x27;use strict&#x27;</span></span><br><span class="line"><span class="keyword">delete</span> <span class="title class_">Object</span>.<span class="property"><span class="keyword">prototype</span></span> <span class="comment">// ❌</span></span><br></pre></td></tr></table></figure>
+
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2><hr>
+<h2 id="this："><a href="#this：" class="headerlink" title="this："></a>this：</h2><h2 id="一句话规则"><a href="#一句话规则" class="headerlink" title="一句话规则"></a>一句话规则</h2><blockquote>
+<p><strong>this 不是函数定义时决定的，而是函数“怎么被调用”决定的</strong></p>
+</blockquote>
+<hr>
+<h2 id="最常见的-4-种情况"><a href="#最常见的-4-种情况" class="headerlink" title="最常见的 4 种情况"></a>最常见的 4 种情况</h2><h3 id="情况-1：普通函数调用"><a href="#情况-1：普通函数调用" class="headerlink" title="情况 1：普通函数调用"></a>情况 1：普通函数调用</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">foo</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">foo</span>()</span><br></pre></td></tr></table></figure>
+
+<p> <code>this === window</code>（浏览器）<br>  严格模式下是 <code>undefined</code></p>
+<hr>
+<h3 id="情况-2：对象方法调用"><a href="#情况-2：对象方法调用" class="headerlink" title="情况 2：对象方法调用"></a>情况 2：对象方法调用</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> obj = &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&#x27;Tom&#x27;</span>,</span><br><span class="line">  <span class="title function_">say</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>.<span class="property">name</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">obj.<span class="title function_">say</span>()</span><br></pre></td></tr></table></figure>
+
+<p><code>this === obj</code></p>
+<hr>
+<h3 id="易错情况"><a href="#易错情况" class="headerlink" title="易错情况"></a>易错情况</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> say = obj.<span class="property">say</span></span><br><span class="line"><span class="title function_">say</span>()</span><br></pre></td></tr></table></figure>
+
+<p> <code>this</code> 不再是 obj<br>  又变回 <code>window / undefined</code></p>
+<hr>
+<h3 id="情况-3：箭头函数（重点）"><a href="#情况-3：箭头函数（重点）" class="headerlink" title="情况 3：箭头函数（重点）"></a>情况 3：箭头函数（重点）</h3><blockquote>
+<p><strong>箭头函数没有自己的 this</strong></p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> obj = &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&#x27;Tom&#x27;</span>,</span><br><span class="line">  <span class="attr">say</span>: <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>.<span class="property">name</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>👉 这里 <code>this</code> 不是 obj<br> 👉 而是 <strong>外层作用域的 this</strong></p>
+<hr>
+<h3 id="情况-4：事件中的-this"><a href="#情况-4：事件中的-this" class="headerlink" title="情况 4：事件中的 this"></a>情况 4：事件中的 this</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">button.<span class="title function_">addEventListener</span>(<span class="string">&#x27;click&#x27;</span>, <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>) <span class="comment">// button</span></span><br><span class="line">&#125;)</span><br><span class="line">button.<span class="title function_">addEventListener</span>(<span class="string">&#x27;click&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>) <span class="comment">// window</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>事件回调里，普通函数的 this 会被浏览器自动绑定为“触发事件的元素”，箭头函数不会</p>
+<hr>
+<h2 id="this-总结"><a href="#this-总结" class="headerlink" title="this 总结"></a>this 总结</h2><blockquote>
+<p><strong>谁调用，this 就是谁（箭头函数除外）</strong></p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> obj = &#123;</span><br><span class="line">  <span class="attr">count</span>: <span class="number">0</span>,</span><br><span class="line">  <span class="title function_">inc</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">count</span>++</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>.<span class="property">count</span>)</span><br><span class="line">    &#125;, <span class="number">1000</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">obj.<span class="title function_">inc</span>()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>undefined</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> obj = &#123;</span><br><span class="line">  <span class="attr">count</span>: <span class="number">0</span>,</span><br><span class="line">  <span class="attr">inc</span>: <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">count</span>++</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>.<span class="property">count</span>)</span><br><span class="line">    &#125;, <span class="number">1000</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">obj.<span class="title function_">inc</span>()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>undefined</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&#x27;use strict&#x27;</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">foo</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> obj = &#123;</span><br><span class="line">  foo</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">obj.<span class="title function_">foo</span>()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>obj</p>
+<hr>
+<h2 id="Promise"><a href="#Promise" class="headerlink" title="Promise:"></a>Promise:</h2><h2 id="1-Promise-的基本结构"><a href="#1-Promise-的基本结构" class="headerlink" title="1.Promise 的基本结构"></a>1.Promise 的基本结构</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> p = <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">// 成功 → resolve</span></span><br><span class="line">  <span class="comment">// 失败 → reject</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="三种状态"><a href="#三种状态" class="headerlink" title="三种状态"></a>三种状态</h3><ul>
+<li>pending（进行中）</li>
+<li>fulfilled（成功）</li>
+<li>rejected（失败）</li>
+</ul>
+<p><strong>状态一旦改变，永远不会再变</strong></p>
+<hr>
+<h2 id="2-then-catch-是什么？"><a href="#2-then-catch-是什么？" class="headerlink" title="2,then &#x2F; catch 是什么？"></a>2,then &#x2F; catch 是什么？</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">p.<span class="title function_">then</span>(<span class="function"><span class="params">result</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(result)</span><br><span class="line">&#125;).<span class="title function_">catch</span>(<span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">error</span>(err)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>👉 <code>then</code> 只处理成功<br> 👉 <code>catch</code> 只处理失败</p>
+<hr>
+<h2 id="3-Promise-链（重点）"><a href="#3-Promise-链（重点）" class="headerlink" title="3.Promise 链（重点）"></a>3.Promise 链（重点）</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">fetch</span>(url)</span><br><span class="line">  .<span class="title function_">then</span>(<span class="function"><span class="params">res</span> =&gt;</span> res.<span class="title function_">json</span>())</span><br><span class="line">  .<span class="title function_">then</span>(<span class="function"><span class="params">data</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(data)</span><br><span class="line">  &#125;)</span><br><span class="line">  .<span class="title function_">catch</span>(<span class="function"><span class="params">err</span> =&gt;</span> <span class="variable language_">console</span>.<span class="title function_">log</span>(err))</span><br></pre></td></tr></table></figure>
+
+<p>👉 每个 <code>then</code> <strong>返回一个新的 Promise</strong></p>
+<hr>
+<h2 id="async-await（Promise-的语法糖）"><a href="#async-await（Promise-的语法糖）" class="headerlink" title="async &#x2F; await（Promise 的语法糖）"></a>async &#x2F; await（Promise 的语法糖）</h2><blockquote>
+<p><strong>本质还是 Promise，只是写起来像同步</strong></p>
+</blockquote>
+<hr>
+<h2 id="1-基本用法"><a href="#1-基本用法" class="headerlink" title="1. 基本用法"></a>1. 基本用法</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">getData</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> res = <span class="keyword">await</span> <span class="title function_">fetch</span>(url)</span><br><span class="line">  <span class="keyword">const</span> data = <span class="keyword">await</span> res.<span class="title function_">json</span>()</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(data)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>等价于 </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">fetch</span>(url)</span><br><span class="line">  .<span class="title function_">then</span>(<span class="function"><span class="params">res</span> =&gt;</span> res.<span class="title function_">json</span>())</span><br><span class="line">  .<span class="title function_">then</span>(<span class="function"><span class="params">data</span> =&gt;</span> <span class="variable language_">console</span>.<span class="title function_">log</span>(data))</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="2-错误处理"><a href="#2-错误处理" class="headerlink" title="2.错误处理"></a>2.错误处理</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">getData</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">try</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> res = <span class="keyword">await</span> <span class="title function_">fetch</span>(url)</span><br><span class="line">    <span class="keyword">const</span> data = <span class="keyword">await</span> res.<span class="title function_">json</span>()</span><br><span class="line">  &#125; <span class="keyword">catch</span> (err) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(err)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="3-await-的本质"><a href="#3-await-的本质" class="headerlink" title="3.await 的本质"></a>3.await 的本质</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">await</span> promise</span><br></pre></td></tr></table></figure>
+
+<p>👉 <strong>等 promise resolve 的结果</strong><br> 👉 不会阻塞线程，只是暂停当前 async 函数</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">foo</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">1</span>)</span><br><span class="line">  <span class="keyword">await</span> <span class="title class_">Promise</span>.<span class="title function_">resolve</span>()</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">2</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">3</span>)</span><br><span class="line"><span class="title function_">foo</span>()</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">4</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>3 1 4 2</p>
+<hr>
+<p><strong>Promise.all</strong><code>里如果传入的不是 Promise，JS 会自动把它包成</code>Promise.resolve(值)</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Promise</span>.<span class="title function_">all</span>([</span><br><span class="line">  <span class="title function_">fetch</span>(<span class="string">&#x27;/api/data&#x27;</span>),</span><br><span class="line">  <span class="number">42</span>,</span><br><span class="line">  <span class="title class_">Promise</span>.<span class="title function_">resolve</span>(<span class="string">&#x27;hello&#x27;</span>)</span><br><span class="line">]).<span class="title function_">then</span>(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(res)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>👉 最终结果：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">  <span class="title class_">Response</span>对象,</span><br><span class="line">  <span class="number">42</span>,</span><br><span class="line">  <span class="string">&quot;hello&quot;</span></span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+    </div>
+</article>
+
+
+                </div>
+                <aside class="col-md-4 gal-left" id="sidebar">
+    <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
+<aside id="sidebar-search">
+    <div class="search hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <form class="form-inline clearfix" id="search-form" method="get"
+              action="/my-blog/search/index.html">
+            <input type="text" name="s" class="form-control" id="searchInput" placeholder="搜索文章~" autocomplete="off">
+            <button class="btn btn-danger btn-gal" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+    </div>
+</aside>
+    <aside id="sidebar-author">
+    <div class="panel panel-gal" data-aos="flip-right" data-aos-duration="3000">
+        <div class="panel-heading" style="text-align: center">
+            <i class="fa fa-quote-left"></i>
+            Jintian Zhang
+            <i class="fa fa-quote-right"></i>
+        </div>
+        <div class="author-panel text-center">
+            <img src="/my-blog/imgs/duye.jpg" width="140" height="140"
+                 alt="个人头像" class="author-image">
+            <p class="author-description"><p>这是我的第一个hexo博客</p>
+</p>
+        </div>
+    </div>
+</aside>
+    
+    <aside id="sidebar-recent_comments">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-comments"></i>
+            最新评论
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush"></ul>
+    </div>
+</aside>
+    
+    <!-- 要配置好leancloud才能开启此小工具 -->
+    
+    
+    <aside id="sidebar-recent_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            近期文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/my-blog/2025/12/21/JavaScript%E5%A4%8D%E4%B9%A0/">JavaScript复习</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/my-blog/2025/12/09/%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/">异步编程</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/my-blog/2025/11/29/OOP-FG/">OOP-FG</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/my-blog/2025/11/27/TRY/">TRY</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/my-blog/2025/11/26/hello-world/">Hello World</a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="sidebar-rand_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            随机文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/my-blog/2025/11/29/OOP-FG/">OOP-FG</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/my-blog/2025/11/27/TRY/">TRY</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/my-blog/2025/12/21/JavaScript%E5%A4%8D%E4%B9%A0/">JavaScript复习</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/my-blog/2025/11/26/hello-world/">Hello World</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/my-blog/2025/12/09/%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/">异步编程</a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="gal-sets">
+        <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+            <ul class="nav nav-pills pills-gal">
+
+                
+                <li>
+                    <a href="/my-blog/2025/12/21/JavaScript%E5%A4%8D%E4%B9%A0/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/my-blog/2025/12/21/JavaScript%E5%A4%8D%E4%B9%A0/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/my-blog/2025/12/21/JavaScript%E5%A4%8D%E4%B9%A0/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                </li>
+                
+            </ul>
+            <div class="tab-content">
+                
+                <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
+    
+    <a href="/my-blog/tags/OOP/" style="font-size: 18.141185458671394px;" class="tag-cloud-link">OOP</a>
+    
+    <a href="/my-blog/tags/FG/" style="font-size: 11.769498578566076px;" class="tag-cloud-link">FG</a>
+    
+    <a href="/my-blog/tags/%E5%A4%8D%E4%B9%A0/" style="font-size: 11.160345736991491px;" class="tag-cloud-link">复习</a>
+    
+    <a href="/my-blog/tags/JS/" style="font-size: 18.721112681807575px;" class="tag-cloud-link">JS</a>
+    
+    <a href="/my-blog/tags/%E5%BC%82%E6%AD%A5/" style="font-size: 19.74512915293699px;" class="tag-cloud-link">异步</a>
+    
+    <a href="/my-blog/tags/promise/" style="font-size: 10.787669390670958px;" class="tag-cloud-link">promise</a>
+    
+</div>
+                
+                
+                <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
+    
+    <li>
+        <a href="http://kdays.net/days/" target="_blank">KDays Forum</a>
+    </li>
+    
+    <li>
+        <a href="http://www.gal123.com/" target="_blank">绅士导航♂</a>
+    </li>
+    
+    <li>
+        <a href="http://www.moe123.com/" target="_blank">萌导航</a>
+    </li>
+    
+</div>
+                
+                
+                <div class="links tab-pane nav bs-sidenav fade" id="sidebar-links">
+    
+    <li>
+        <a href="https://github.com/ZEROKISEKI/" target="_blank">Github</a>
+    </li>
+    
+    <li>
+        <a href="https://coding.net/u/SORA1" target="_blank">Coding</a>
+    </li>
+    
+    <li>
+        <a href="https://www.zhihu.com/people/aonosora/activities" target="_blank">知乎</a>
+    </li>
+    
+</div>
+                
+            </div>
+        </div>
+    </aside>
+    
+</aside>
+            </div>
+        </div>
+    </div>
+    <footer id="gal-footer">
+    <div class="container">
+        Copyright © 2018 Jintian Zhang Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a href="https://github.com/ZEROKISEKI" target="_blank">AONOSORA</a>
+    </div>
+</footer>
+
+<!-- 回到顶端 -->
+<div id="gal-gotop">
+    <i class="fa fa-angle-up"></i>
+</div>
+</body>
+
+<script src="/my-blog/js/activate-power-mode.js"></script>
+
+<script>
+
+    // 配置highslide
+	hs.graphicsDir = '/js/highslide/graphics/'
+    hs.outlineType = "rounded-white";
+    hs.dimmingOpacity = 0.8;
+    hs.outlineWhileAnimating = true;
+    hs.showCredits = false;
+    hs.captionEval = "this.thumb.alt";
+    hs.numberPosition = "caption";
+    hs.align = "center";
+    hs.transitions = ["expand", "crossfade"];
+    hs.lang.number = '共%2张图, 当前是第%1张';
+    hs.addSlideshow({
+      interval: 5000,
+      repeat: true,
+      useControls: true,
+      fixedControls: "fit",
+      overlayOptions: {
+        opacity: 0.75,
+        position: "bottom center",
+        hideOnMouseOut: true
+      }
+    })
+
+    // 初始化aos
+    AOS.init({
+      duration: 1000,
+      delay: 0,
+      easing: 'ease-out-back'
+    });
+
+</script>
+<script>
+	POWERMODE.colorful = 'true';    // make power mode colorful
+	POWERMODE.shake = 'true';       // turn off shake
+	// TODO 这里根据具体情况修改
+	document.body.addEventListener('input', POWERMODE);
+</script>
+<script>
+    window.slideConfig = {
+      prefix: '/my-blog/imgs/slide/back',
+      ext: 'jpg',
+      maxCount: '6'
+    }
+</script>
+
+<script src="/my-blog/js/hs.js"></script>
+<script src="/my-blog/js/blog.js"></script>
+
+
+
+
+</html>
